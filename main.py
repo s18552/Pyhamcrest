@@ -56,7 +56,10 @@ if __name__ == "__main__":
 import unittest
 
 
+
 class Test(unittest.TestCase):
+
+
 
     def test_earned_money(self):
         self.assertTrue("$400" in statement({"customer": "BigCo",
@@ -93,4 +96,5 @@ class Test(unittest.TestCase):
                                              {
                                                  "as-like": {"name": "As You Like It", "type": "comedy"}
                                              }))
+
 
