@@ -1,6 +1,5 @@
 class hamming:
     def distance(s1, s2):
-        print()
         if len(s1) != len(s2):
             raise ValueError("strings have different length")
         i = 0
