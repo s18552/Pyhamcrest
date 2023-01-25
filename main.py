@@ -1,7 +1,4 @@
-import json
 import math
-
-import pytest as pytest
 
 
 def statement(invoice, plays):
@@ -52,14 +49,10 @@ if __name__ == "__main__":
                   "othello": {"name": "Othello", "type": "tragedy"}
               })
 
-
 import unittest
 
 
-
 class Test(unittest.TestCase):
-
-
 
     def test_earned_money(self):
         self.assertTrue("$400" in statement({"customer": "BigCo",
@@ -76,25 +69,22 @@ class Test(unittest.TestCase):
                                                  "hamlet": {"name": "Hamlet", "type": "tragedy"},
                                                  "as-like": {"name": "As You Like It", "type": "comedy"}}))
 
-
     def test_credits_for_othello(self):
         self.assertTrue("10" in statement({"customer": "BigCo",
-                                              "performances": [{"playID": "othello", "audience": 40}]},
-                                             {
-                                                 "othello": {"name": "Othello", "type": "tragedy"}}))
+                                           "performances": [{"playID": "othello", "audience": 40}]},
+                                          {
+                                              "othello": {"name": "Othello", "type": "tragedy"}}))
 
     def test_credits_for_as_like(self):
         self.assertTrue("12" in statement({"customer": "BigCo",
-                                              "performances": [{"playID": "as-like", "audience": 35}]},
-                                             {
-                                                 "as-like": {"name": "As You Like It", "type": "comedy"}
-                                             }))
+                                           "performances": [{"playID": "as-like", "audience": 35}]},
+                                          {
+                                              "as-like": {"name": "As You Like It", "type": "comedy"}
+                                          }))
 
     def test_audience_for_as_like(self):
         self.assertTrue("100" in statement({"customer": "BigCo",
-                                              "performances": [{"playID": "as-like", "audience": 100}]},
-                                             {
-                                                 "as-like": {"name": "As You Like It", "type": "comedy"}
-                                             }))
-
-
+                                            "performances": [{"playID": "as-like", "audience": 100}]},
+                                           {
+                                               "as-like": {"name": "As You Like It", "type": "comedy"}
+                                           }))

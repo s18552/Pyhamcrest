@@ -34,8 +34,8 @@ class FizzBuzzTest(unittest.TestCase):
         self.assertRaises(Exception, self.temp.game, "15")
 
     def test_fizz_buzz_exceptions_for_too_great_arg(self):
-        self.assertRaises(Exception, self.temp.game, 135443543513451435351345463456345634563645634563456345634563464453212342134)
+        self.assertRaises(Exception, self.temp.game,
+                          135443543513451435351345463456345634563645634563456345634563464453212342134)
 
     def tearDown(self):
         self.temp = None
-

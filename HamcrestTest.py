@@ -69,7 +69,6 @@ class CarTest(unittest.TestCase):
     def test_check_negative_year_of_production(self):
         assert_that(calling(self.temp.set_year).with_args(-81), raises(Exception))
 
-
     def test_check_model(self):
         self.temp.set_model('BMW')
 
@@ -93,7 +92,7 @@ class CarTest(unittest.TestCase):
 
     def test_check_array2(self):
         arr = self.temp.get_filled_array()
-        car= Car()
+        car = Car()
         arr.add(car)
 
         assert_that(arr, all_of(has_length(3), has_item(car)))

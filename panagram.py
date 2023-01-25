@@ -9,6 +9,7 @@ class App:
             raise Exception
         return sum(1 for i in set(str) if 96 < ord(i) <= 122) == 26
 
+
 import unittest
 
 
